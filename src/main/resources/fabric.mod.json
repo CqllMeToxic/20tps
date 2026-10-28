@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "twentytps",
+	"version": "${version}",
+	"name": "20tps",
+	"description": "osu! but in Minecraft!",
+	"authors": ["CqllMeToxic"],
+	"license": "MIT",
+	"icon": "assets/twentytps/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["dev.twentytps.client.TwentyTpsClient"]
+	},
+	"mixins": [
+		{ "config": "twentytps.client.mixins.json", "environment": "client" }
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

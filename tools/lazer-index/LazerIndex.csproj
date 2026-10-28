@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    reads an osu!lazer client.realm (read-only) and writes out a json index of beatmap sets and
+    skins, mapping each file name to its hashed path in lazer's files/ folder.
+
+    we don't ship realm with this. it gets loaded from the osu!lazer install at runtime, so it
+    always matches whatever version lazer saved the database with.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RollForward>Major</RollForward>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Realm" Version="20.1.0" ExcludeAssets="runtime;native;build;buildTransitive;analyzers" PrivateAssets="all" />
+  </ItemGroup>
+</Project>
