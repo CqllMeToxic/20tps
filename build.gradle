@@ -44,7 +44,7 @@ tasks.register("buildLazerIndex", Exec) {
 	outputs.dir(lazerIndexOut)
 	workingDir "tools/lazer-index"
 	commandLine "dotnet", "build", "-c", "Release", "-o", lazerIndexOut.get().dir("lazer-index").asFile.absolutePath,
-			"-p:DebugType=none", "-nologo", "-v", "q"
+			"-p:DebugType=none", "-p:ContinuousIntegrationBuild=true", "-nologo", "-v", "q"
 }
 
 tasks.named("processClientResources") {
